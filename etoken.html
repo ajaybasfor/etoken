@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=h, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<div class="container">
+		<div class="header">
+			<h2>E-TOKEN SYSTEM</h2>
+		</div>
+		<div class="anim">
+			<table border="0" cellpadding="28" align="center">
+				<tr>
+					<td>Token No &nbsp;</td>
+					<td id="token"></td>
+				</tr>
+				<tr>
+					<td>Date &nbsp;</td>
+					<td id="date1">: </td>
+				</tr>
+				<tr>
+					<td>Time &nbsp;</td>
+					<td id="time1">: </td>
+				</tr>
+				<tr>
+					<td>Purpose &nbsp;</td>
+					<td id="name">: </td>
+				</tr>
+				<tr>
+					<td>Mobile No &nbsp;</td>
+					<td id="mobileno">: </td>
+				</tr>
+			</table>
+			<button class="btn btn-success" style="margin-left: 22rem;">Save Token(Ctrl + P)</button>
+			<a href="index.html"><button class="btn btn-primary">Home Page</button></a>
+		</div>
+	</div>
+	<script type="text/javascript" src="script.js"></script>
+	<script>
+		// purpose
+		let token_purpose = sessionStorage.getItem("token_purpose");
+		document.getElementById("name").innerText = ": " + token_purpose;
+		// date & time
+		var d = new Date();
+		document.getElementById("time1").innerText = ": " + d.toLocaleTimeString();
+		document.getElementById("date1").innerText = ": " + d.toLocaleDateString();
+
+		// token
+		var t = 1;
+		window.addEventListener('load', () => {
+			if(sessionStorage.clickcount) {
+				sessionStorage.clickcount = Number(sessionStorage.clickcount) + 1;
+				document.getElementById("token").innerText  = ": " + sessionStorage.clickcount;
+			}
+			else{
+				sessionStorage.clickcount = 1;
+				document.getElementById("token").innerText  = ": " + sessionStorage.clickcount;
+			}
+		})
+		//mobile no print
+		let mn = sessionStorage.getItem("mobileno");
+		document.getElementById("mobileno").innerText = ": " + mn;
+	</script>
+</body>
+
+</html>

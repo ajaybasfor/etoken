@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=h, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<div class="container">
+		<div class="header">
+			<h2>E-TOKEN SYSTEM</h2>
+		</div>
+		<div id="time"></div>
+		<div id="date"></div>
+		<div class="main-content">
+			<a href="mobile_number.html">
+				<div id="passbook_print">Passbook Print</div>
+			</a>
+			<a href="mobile_number.html">
+				<div id="cash_deposit">Cash Deposit</div>
+			</a>
+			<a href="mobile_number.html">
+				<div id="cash_widthrawl">Cash Widthrawl</div>
+			</a>
+			<a href="mobile_number.html">
+				<div id="general_query">General Query</div>
+			</a>
+			<a href="mobile_number.html">
+				<div id="account_opening">Account Opening</div>
+			</a>
+			<a href="mobile_number.html">
+				<div id="account_closing">Account Closing</div>
+			</a>
+			<a href="mobile_number.html">
+				<div id="new_atm">New ATM</div>
+			</a>
+			<a href="mobile_number.html">
+				<div id="kyc_update">KYC Update</div>
+			</a>
+			<a href="mobile_number.html">
+				<div id="credit_card">Credit Card</div>
+			</a>
+		</div>
+		<div class="footer"></div>
+	</div>
+	<script>
+		let a = document.querySelectorAll('a');
+		for (i of a) {
+			i.addEventListener('click', (e) => {
+				b = e.target.innerText;
+				sessionStorage.setItem("token_purpose", b);
+			})
+		}
+	</script>
+	<script src="script.js"></script>
+</body>
+
+</html>

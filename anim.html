@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=h, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<div class="container">
+		<div class="header">
+			<h2>E-TOKEN SYSTEM</h2>
+		</div>
+		<div class="anim">
+			<div class="countdown d-flex justify-content-center">
+				<div class="spinner-border text-success " style="width: 15rem; height: 15rem;" role="status">
+				</div>
+				<div class="cno" id="incre">5</div>
+			</div>
+		</div>
+		<div class="next">
+			<button class="btn btn-primary" type="button" disabled>
+				<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+				Generating E-Token
+			</button>
+		</div>
+	</div>
+	<script>
+		var seconds = 4;
+		var count = 4;
+		var interval = setInterval(printMsg, 1000);
+		function printMsg() {
+			if (count == 0) {
+				clearInterval(interval);
+			}
+			count -= 1;
+			document.getElementById("incre").innerHTML = seconds;
+			seconds--;
+		}
+		let v = setTimeout(fn,6000);
+		function fn(){
+			window.location.href = "etoken.html";
+		}
+	</script>
+	<!-- <script type="text/javascript" src="script.js"></script> -->
+</body>
+
+</html>

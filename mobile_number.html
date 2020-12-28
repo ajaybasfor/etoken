@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=h, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<div class="container">
+		<div class="header">
+			<h2>E-TOKEN SYSTEM</h2>
+		</div>
+		<div class="mobile_header">
+			<h3>Enter Mobile Number</h3>
+		</div>
+		<div class="result_enter">
+			<input type="text" name="result" id="result" disabled>
+		</div>
+		<div class="alert alert-danger alert-dismissible fade show error_msg" style="display: none;" id="error_btn">
+			<button type="button" class="close" data-dismiss="alert" id="btnclose">&times;</button>
+			<strong>Error!</strong> Mobile Number is Invalid !
+		</div>
+		<div class="number_tab">
+			<button class="nbtn">1</button>
+			<button class="nbtn">2</button>
+			<button class="nbtn">3</button>
+			<button class="nbtn">4</button>
+			<button class="nbtn">5</button>
+			<button class="nbtn">6</button>
+			<button class="nbtn">7</button>
+			<button class="nbtn">8</button>
+			<button class="nbtn">9</button>
+			<button class="nbtn">0</button>
+			<button class="nbtn">00</button>
+			<button class="nbtn">C</button>
+		</div>
+		<div class="prev">
+			<a href="index.html"><button class="btn btn-success">Previous</button></a>
+		</div>
+		<div class="next">
+			<button class="btn btn-success" onclick="validate()">Get E-Token</button>
+		</div>
+	</div>
+	<script type="text/javascript" src="script.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		crossorigin="anonymous"></script>
+</body>
+
+</html>
